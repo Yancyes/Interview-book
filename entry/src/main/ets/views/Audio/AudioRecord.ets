@@ -38,7 +38,7 @@ export struct AudioRecordComp {
     this.filePath = filePath
     const file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE)
     this.fd = file.fd
-    // 2. 准备路由配置对象
+    // 2. 准备录音配置对象
     const config: media.AVRecorderConfig = {
       audioSourceType: media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
       profile: {
